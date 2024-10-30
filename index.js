@@ -10,6 +10,7 @@ app.get("/coin", async (req, res) => {
     try {
 
     const response = await fetch("https://api.coingecko.com/api/v3/ping");
+    console.log("response ", response);
     const json = await response.json();
     console.log("responseponse ", json);
     res.send(json);
